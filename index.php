@@ -27,17 +27,29 @@
             <div class="row">
                 <div class="col-sm-6 formulario">
                     <h6>Los campos con (*) son obligatorios</h6>
+
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Nombre (*):</label>
                         <input type="text" name="nombre" class="form-control" id="nombre"
                             placeholder="Ingresa tu nombre">
                     </div>
-
-                    <div class="mb-3">
-                        <label for="telefono" class="form-label">Teléfono (*):</label>
-                        <input type="text" name="telefono" class="form-control" id="telefono"
-                            placeholder="Ingresa tu teléfono">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="dni" class="form-label">DNI (*):</label>
+                                <input type="text" name="dni" class="form-control" id="dni"
+                                    placeholder="Ingresa tu DNI">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label">Teléfono (*):</label>
+                                <input type="text" name="telefono" class="form-control" id="telefono"
+                                    placeholder="Ingresa tu teléfono">
+                            </div>
+                        </div>
                     </div>
+
 
                     <div class="mb-3">
                         <label for="email" class="form-label">Email (*):</label>

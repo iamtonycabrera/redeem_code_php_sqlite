@@ -15,10 +15,9 @@ $defineTable = "CREATE TABLE IF NOT EXISTS registros(
         telefono TEXT NOT NULL,
         email TEXT NOT NULL,
         direccion TEXT NOT NULL,
-        dpto TEXT NOT NULL,
+        departamento TEXT NOT NULL,
         ciudad TEXT NOT NULL,
         fecha_creacion DATE
     );";
 
 $result = $database->exec($defineTable);
-echo "Table created successfuly";
