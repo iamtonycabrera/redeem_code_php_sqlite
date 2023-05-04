@@ -23,6 +23,29 @@
             <h1 class="text-center">Regístrate y reclama el código en un punto de venta</h1>
         </div>
 
+        <div class="row mt-4 mx-4" style="padding-left: 50px; padding-right: 50px;">
+            <!-- Aqui se configura el mensaje -->
+            <?php if (isset($_GET['message']) && isset($_GET['codigo'])) : ?>
+
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong><?php echo $_GET['message'] . ". CODIGO: " . $_GET['codigo']; ?></strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+            <?php endif ?>
+
+            <!-- Aqui se configura el error -->
+            <?php if (isset($_GET['error'])) : ?>
+
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong><?php echo $_GET['error']; ?></strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+            <?php endif ?>
+
+        </div>
+
         <form method="POST" action="procesar.php">
             <div class="row">
                 <div class="col-sm-6 formulario">
