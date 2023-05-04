@@ -23,21 +23,56 @@
             <h1 class="text-center">Regístrate y reclama el código en un punto de venta</h1>
         </div>
 
+        <div class="row mt-4 mx-4" style="padding-left: 50px; padding-right: 50px;">
+            <!-- Aqui se configura el mensaje -->
+            <?php if (isset($_GET['message']) && isset($_GET['codigo'])) : ?>
+
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong><?php echo $_GET['message'] . ". CODIGO: " . $_GET['codigo']; ?></strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+            <?php endif ?>
+
+            <!-- Aqui se configura el error -->
+            <?php if (isset($_GET['error'])) : ?>
+
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong><?php echo $_GET['error']; ?></strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+            <?php endif ?>
+
+        </div>
+
         <form method="POST" action="procesar.php">
             <div class="row">
                 <div class="col-sm-6 formulario">
                     <h6>Los campos con (*) son obligatorios</h6>
+
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Nombre (*):</label>
                         <input type="text" name="nombre" class="form-control" id="nombre"
                             placeholder="Ingresa tu nombre">
                     </div>
-
-                    <div class="mb-3">
-                        <label for="telefono" class="form-label">Teléfono (*):</label>
-                        <input type="text" name="telefono" class="form-control" id="telefono"
-                            placeholder="Ingresa tu teléfono">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="dni" class="form-label">DNI (*):</label>
+                                <input type="text" name="dni" class="form-control" id="dni"
+                                    placeholder="Ingresa tu DNI">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label">Teléfono (*):</label>
+                                <input type="text" name="telefono" class="form-control" id="telefono"
+                                    placeholder="Ingresa tu teléfono">
+                            </div>
+                        </div>
                     </div>
+
 
                     <div class="mb-3">
                         <label for="email" class="form-label">Email (*):</label>
