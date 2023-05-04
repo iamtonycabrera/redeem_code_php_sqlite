@@ -1,28 +1,46 @@
 body {
-  background-color: #fec85b;
-  color: #fff;
+  background-color: #fcfcfc;
+  color: #5d69cb;
 }
 
 .caja {
-  padding: 5px;
-  margin-top: 20px;
-  border: 1px solid #252f7f;
-  background: rgb(50, 61, 154);
-  background: linear-gradient(
+  padding: 0px;
+  /* background: linear-gradient(
     0deg,
     rgba(50, 61, 154, 1) 0%,
     rgba(93, 105, 203, 1) 100%
-  );
-  background-color: #5d69cb;
-  border-radius: 12px;
-
-  -webkit-box-shadow: 0px 10px 13px -7px #000000,
-    5px 5px 15px 5px rgba(0, 0, 0, 0);
-  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  ); */
+  background-color: #ffffff;
+  border-radius: 50px;
+  box-shadow: 0px 0px 20px -10px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  margin: 50px auto;
+  border: 5px solid #5d69cb;
 }
 
 .btnRegistrarse {
-  background-color: #86bd37;
+  background-color: #5d69cb;
+  border: 5px solid #5d69cb;
+  color: #fcfcfc;
   font-size: 24px;
   font-weight: bold;
+  border-radius: 20px;
+}
+
+.btnRegistrarse:hover {
+  background-color: #fcfcfc;
+  border: 5px solid #5d69cb;
+  color: #5d69cb;
+}
+
+.formulario {
+  padding: 50px 100px;
+}
+
+.image {
+  display: inline-block;
+  align-self: flex-end;
+}
+
+.image img {
+  border-radius: 45px;
 }
